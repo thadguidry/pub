@@ -31,14 +31,29 @@
         <h3>
 <a id="welcome-to-the-public-ipso-repository" class="anchor" href="#welcome-to-the-public-ipso-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to the public IPSO Repository.</h3>
 
-<p>Here you can find the <a href="https://github.com/IPSO-Alliance/pub/tree/master/reg">IPSO Smart Object Registry</a> with the current object set. Please remember to   Guidelines provide a common design pattern, an object model, that can effectively use the IETF CoAP protocol to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. </p>
+<p>Here you can find the <a href="https://github.com/IPSO-Alliance/pub/tree/master/reg">IPSO Smart Object Registry</a> with the current object set. The registry is intended for developers that are building products based on IPSO Objects, it is not intended to be used at runtime by applications. </p>
 
 <p>This object set is intended to be used as a starting place from which to build more as needed Some of the objects are generic in nature, such as voltage, altitude or percentage, while others are more specialized like the Color Object or the Gyrometer Object. Actuators and Controllers are defined such as timer or buzzer and Joystick and Level. All of these objects were found to be necessary on a variety of use case domains.</p>
 
 <h3>
+<a id="object-representation" class="anchor" href="#object-representation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Object Representation</h3>
+
+<p>Objects and resources are implicitly mapped into the URI path hierarchy by following the OMA LWM2M object model, in which each URI path component sequentially represents the Object Type ID, the Object Instance ID and the Resource Type ID. More precisely the structure consists of three unsigned 16-bit integers separated by the character '/':</p>
+
+<pre><code>&lt;object ID&gt;/&lt;object instance ID&gt;/&lt;resource ID&gt;
+</code></pre>
+
+<p>For example, a temperature sensor example URI would be <code>3303/0/5700</code>:</p>
+
+<pre><code>3300  -&gt; Temperature Sensor
+0     -&gt; instance 0 of a Temperature Sensor
+5700  -&gt; resource having the current value or a most recent reading
+</code></pre>
+
+<h3>
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h3>
 
-<p>You can check the <a href="https://github.com/IPSO-Alliance/pub/docs/">documentation</a> for the public documents we have released. </p>
+<p>You can check the <a href="https://github.com/IPSO-Alliance/pub/docs/">documentation</a> for the public documents we have released. Also the <a href="https://github.com/IPSO-Alliance/pub">README</a> has more introductory material. </p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
