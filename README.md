@@ -1,7 +1,3 @@
-<p align="right">
-	<img src="http://wwwold.ipso-alliance.org/wp-content/media/ipso-CMYK-dark-01.png" width="150">
-</p>
-
 # IP for Smart Objects
 
 ## Table of Contents
