@@ -47,25 +47,11 @@
 
 <pre><code>3300  -&gt; Temperature Sensor
 0     -&gt; instance 0 of a Temperature Sensor
-5700  -&gt; resource having the current value or a most recent reading
+5700  -&gt; resource having the current value or recent reading
 </code></pre>
 
 <h3>
 <a id="object-validation" class="anchor" href="#object-validation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Object Validation</h3>
-
-<h1>
-<a id="validator" class="anchor" href="#validator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator</h1>
-
-<p>Before submitting new Objects it is important to validate them against the LWM2M schema. 
-You will need xmllint for that.</p>
-
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Run xmllint against one or multiple Objects Object </span>
-$ xmllint --noout --schema LWM2M.xsd example.xml
-<span class="pl-c"># The output should be:</span>
-$ example.xml validates</pre></div>
-
-<h3>
-<a id="validator-1" class="anchor" href="#validator-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator</h3>
 
 <p>Anybody can use composition to create new Objects from the existing ones. You would just need to validate them before submitting new ones. You can use 'xmllint' to validate against the <a href="http://technical.openmobilealliance.org/tech/profiles/LWM2M.xsd">LWM2M Schema</a>.</p>
 
