@@ -2,20 +2,9 @@
 	<img src="http://wwwold.ipso-alliance.org/wp-content/media/ipso-CMYK-dark-01.png" width="150">
 </p>
 
-# IP for Smart Objects - Smart Objects 
-## IoT Semantic Interoperability Workshop 2016 
-* Jaime Jimenez - jaime.jimenez@ericsson.com
-* Michael Koster - michael.koster@smartthings.com
-* Hannes Tschofering - hannes.tschofenig@arm.com
+# IP for Smart Objects
 
-> _**Note Well**_
->
->The content of this document describes the current state of work at the IPSO Alliance as submitted in the position paper for the IAB Workshop 2016. The document has been reviewed and approved by the IPSO Smart Object Committee. The authors would like to thank Bill Silverajan and Jens Eliasson for their feedback.
-
->For access to the full specification and data set please go to: http://www.ipso-alliance.org/ipso-community/resources/smart-objects-interoperability/ or contact the repository administrators.
-
-
-# Table of Contents
+## Table of Contents
 1. [Introduction](#Introduction)
 2. [Components](#Data Model Components)
 3. [Composite Objects](#Composite Objects)
@@ -31,6 +20,8 @@ Standards for constrained devices are rapidly consolidating and the availability
 However, the use of standardized protocols does not ensure interoperability on the application layer. Therefore, there is a clear need for being able to communicate using structured data models on top of protocols like CoAP and HTTP.
 
 IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the Open Mobile Alliance Lightweight Specification (OMA LWM2M) [3], which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
+
+You can find the existing 
 
 
 ## 2. Data Model Components
@@ -245,41 +236,41 @@ To complement the initial set of objects, this new IPSO Smart Object Expansion P
 Some of the new objects are generic in nature, such as voltage, altitude or percentage, while others are more specialized like the Color Object or the Gyrometer Object. New Actuators and Controllers are defined such as timer or buzzer and Joystick and Level. All of these objects were found to be necessary on a variety of use case domains.
 
     
-| Object 		| Object ID     |
-|:----------------------|:-----:|
-|Voltage		| 3316|
-|Current		| 3317|
-|Frequency		| 3318|
-|Depth		| 3319|
-|Percentage		| 3320|
-|Altitude		| 3321|
-|Load		| 3322|
-|Pressure		| 3323|
-|Loudness		| 3324|
-|Concentration 		| 3325|
-|Acidity		| 3326|
-|Conductivity		| 3327|
-|Power		| 3328|
-|Power Factor		| 3329|
-|Rate		| 3346|
-|Distance		| 3330|
-|Energy		| 3331|
-|Direction		| 3332|
-|Time		| 3333|
-|Gyrometer		| 3334|
-|Color 		| 3335|
-|GPS Location 		| 3336|
-|Positioner 		| 3337|
-|Buzzer		| 3338|
-|Audio Clip		| 3339|
-|Timer		| 3340|
-|Addressable Text Display		| 3341|
-|On/Off Switch		| 3342|
-|Push Button		| 3347|
-|Level Control		| 3343|
-|Up/Down Control		| 3344|
-|Multistate Selector		| 3348|
-|Multiple Axis Joystick		| 3345|
+| Object 				| Object ID   |
+|:----------------------|:-----------:|
+|    Voltage					| 3316|
+|    Current					| 3317|
+|    Frequency					| 3318|
+|    Depth						| 3319|
+|    Percentage					| 3320|
+|    altitude					| 3321|
+|    Load						| 3322|
+|    Pressure					| 3323|
+|    Loudness					| 3324|
+|    Concentration 				| 3325|
+|    Acidity					| 3326|
+|    Conductivity				| 3327|
+|    Power						| 3328|
+|    Power Factor				| 3329|
+|    Rate						| 3346|
+|    Distance					| 3330|
+|    Energy						| 3331|
+|    Direction					| 3332|
+|    Time						| 3333|
+|    Gyrometer					| 3334|
+|    Color 						| 3335|
+|    GPS Location 				| 3336|
+|    Positioner 				| 3337|
+|    Buzzer						| 3338|
+|    Audio Clip					| 3339|
+|    Timer						| 3340|
+|    Addressable Text Display	| 3341|
+|    On/Off Switch				| 3342|
+|    Push Button				| 3347|
+|    Level Controllers			| 3343|
+|    Up/Down Control			| 3344|
+|    Multistate Selector		| 3348|
+|    Multiple Axis Joystick		| 3345|
 
 ## 4.5. Smart Objects - Application Specific Objects
 
