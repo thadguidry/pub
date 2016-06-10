@@ -21,7 +21,7 @@ However, the use of standardized protocols does not ensure interoperability on t
 
 IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the Open Mobile Alliance Lightweight Specification (OMA LWM2M) [3], which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
 
-You can find the existing 
+**Developers can already use the Objects at the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml)**
 
 
 ## 2. Data Model Components
