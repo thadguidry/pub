@@ -93,7 +93,7 @@ As devices increase in complexity (e.g., from a sensor to an appliance, from a s
 For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700 is ”generic object link”. Composite objects offer higher granularity than one large nested object would. An observer of a device represented as a composite object could reduce bandwidth utilization by observing only the linked object instances instead of the full object. Figure 3 shows an example, performing a GET operation to the IPSO thermostat composite object ”/8300/0/7100” would retrieve an object link to ”/3300/0”.
 
 
-# ![IPSO Object](https://github.com/IPSO-Alliance/StartHere/blob/master/linking.png)
+# ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/linking.png)
 
 ## 4. Examples and Extended References
 
@@ -104,7 +104,7 @@ For practical purposes we require a format for representing the objects in an un
 ### 4.2 Humidity Sensor 
 
 The following is a example of a humidity sensor that contains the sensor value, units, min and max measured values, min and max range values and a rest of those. 
-# ![IPSO Object](https://github.com/IPSO-Alliance/StartHere/blob/master/humidity_object.png)
+# ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/humidity_object.png)
 
 
 The following is the definition document for the Humidity Object in XML.
