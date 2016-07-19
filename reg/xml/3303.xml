@@ -50,7 +50,7 @@
 			</Item>
 			<Item ID="5604">
 				<Name>Max Range Value</Name>
-				<Operations>E</Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
