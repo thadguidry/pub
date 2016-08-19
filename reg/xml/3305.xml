@@ -39,7 +39,7 @@
 				<Description>The maximum active power measured by the sensor since it is ON</Description>
 			</Item>
 			<Item ID="5803">
-				<Name>Min  Range  active power</Name>
+				<Name>Min Range active power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -99,7 +99,7 @@
 				<Description>The minimum reactive power measured by the sensor since it is ON</Description>
 			</Item>
 			<Item ID="5812">
-				<Name>Max Measured  reactive power</Name>
+				<Name>Max Measured reactive power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -109,7 +109,7 @@
 				<Description>The maximum reactive power measured by the sensor since it is ON</Description>
 			</Item>
 			<Item ID="5813">
-				<Name>Min  Range  reactive power</Name>
+				<Name>Min Range reactive power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -149,7 +149,7 @@
 				<Description>Request a reactive power calibration by writing the value of a calibrated load.</Description>
 			</Item>
 			<Item ID="5820">
-				<Name>Power factor</Name>
+				<Name>Power Factor</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>

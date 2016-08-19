@@ -1,10 +1,10 @@
 # Smart Objects
 
-IPSO Smart Object Guidelines provide a common design pattern, an object model, that can effectively use the IETF CoAP protocol to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. 
+IPSO Smart Object Guidelines provide a common design pattern, an object model, that can effectively use the IETF CoAP protocol to provide high level interoperability between Smart Object devices and connected software applications on other devices and services.
 
 This object set is intended to be used as a starting place from which to build more as needed Some of the objects are generic in nature, such as voltage, altitude or percentage, while others are more specialized like the Color Object or the Gyrometer Object. Actuators and Controllers are defined such as timer or buzzer and Joystick and Level. All of these objects were found to be necessary on a variety of use case domains.
 
-    
+
 | Object 				| Object ID   |
 |:----------------------|:-----------:|
 |    Digital 					| 3200|
@@ -58,6 +58,58 @@ This object set is intended to be used as a starting place from which to build m
 |    Up/Down Control			| 3344|
 |    Multistate Selector		| 3348|
 |    Multiple Axis Joystick		| 3345|
+
+
+Below there is the set of Resources that can be used as building blocks for your Objects.
+
+| Resource              | Resource ID   |
+|:--------------------------------|:---:|
+|    Digital Input State					| 5500|
+|    Digital Input Counter				| 5501|
+|    Digital Input Polarity				| 5502|
+|    Digital Input Debounce				| 5503|
+|    Digital Input Edge Selection	| 5504|
+|    Digital Input Counter Reset	| 5505|
+|    Digital Output State					| 5550|
+|    Digital Output Polarity			| 5551|
+|    Analog Input State					  | 5600|
+|    Min Measured Value           | 5601|
+|    Max Measured Value           | 5602|
+|    Min Range Value              | 5603|
+|    Max Range Value              | 5604|
+|Reset Min and Max Measured Values| 5605|
+|    Min Range Value              | 5603|
+|    Max Range Value              | 5604|
+|    Sensor Value	                | 5700|
+|    Sensor Units	                | 5701|
+|    Application Type	            | 5750|
+|    Sensor Type	                | 5751|
+|    Busy to Clear delay          | 5903|
+|    Clear to Busy delay          | 5904|
+|    Instantaneous active power   | 5800|
+|    Min Measured active power    | 5801|
+|    Max Measured active power    | 5802|
+|    Min Range active power       | 5803|
+|    Max Range active power       | 5803|
+|    Cumulative active power      | 5805|
+|    Active Power Calibration     | 5806|
+|    Instantaneous reactive power | 5810|
+|    Min Measured reactive power  | 5812|
+|    Max Measured reactive power  | 5812|
+|    Min Range reactive power     | 5813|
+|    Max Range reactive power     | 5814|
+|    Cumulative reactive power    | 5815|
+|    Reactive Power Calibration   | 5816|
+|    Power Factor                 | 5820|
+|    Current Calibration          | 5821|
+|    Reset Cumulative energy      | 5822|
+|    On/Off                       | 5850|
+|    Dimmer                       | 5851|
+|    On Time                      | 5852|
+|    Muti-state Output            | 5853|
+|    Set Point Value              | 5900|
+|    Units                        | 5701|
+|    Colour                       | 5706|
 
 NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
 * Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
