@@ -2,7 +2,7 @@
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Up/Down Control</Name>
-        <Description1>This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.      
+        <Description1>This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.
         </Description1>
         <ObjectID>3344</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3344</ObjectURN>
@@ -10,7 +10,7 @@
         <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="5532">
-                <Name>Increase input State</Name>
+                <Name>Increase Input State</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>

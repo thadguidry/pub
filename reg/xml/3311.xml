@@ -49,7 +49,7 @@
 				<Description>The total power in Wh that the light has used.</Description>
 			</Item>
 			<Item ID="5820">
-				<Name>Power factor</Name>
+				<Name>Power Factor</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
