@@ -2,7 +2,7 @@
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Multiple Axis Joystick</Name>
-        <Description1>This IPSO object can be used to report the position of a shuttle or joystick control. A digital input is provided to report the state of an associated push button.      
+        <Description1>This IPSO object can be used to report the position of a shuttle or joystick control. A digital input is provided to report the state of an associated push button.
         </Description1>
         <ObjectID>3345</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3345</ObjectURN>

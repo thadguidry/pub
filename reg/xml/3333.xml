@@ -2,7 +2,7 @@
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Time</Name>
-        <Description1>This IPSO object is used to report the current time in seconds since January 1, 1970 UTC. There is also a fractional time counter that has a range of less than one second.      
+        <Description1>This IPSO object is used to report the current time in seconds since January 1, 1970 UTC. There is also a fractional time counter that has a range of less than one second.
         </Description1>
         <ObjectID>3333</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3333</ObjectURN>

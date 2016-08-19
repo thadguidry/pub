@@ -2,7 +2,7 @@
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Colour</Name>
-        <Description1>This IPSO object should be used to report the measured value of a colour sensor in some colour space described by the units resource.      
+        <Description1>This IPSO object should be used to report the measured value of a colour sensor in some colour space described by the units resource.
         </Description1>
         <ObjectID>3335</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3335</ObjectURN>
