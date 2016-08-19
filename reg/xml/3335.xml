@@ -20,7 +20,7 @@
                 <Description>A string representing a value in some colour space.</Description>
             </Item>
             <Item ID="5701">
-                <Name>Units</Name>
+                <Name>Sensor Units</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
