@@ -1,5 +1,9 @@
 # IP for Smart Objects
 
+## XML Validation
+
+[![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
+
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [Components](#Data Model Components)
@@ -25,8 +29,8 @@ IPSO Smart Objects provide a common design pattern, an object model, to provide 
 The data model for IPSO Smart Objects consists of 5 parts:
 
 1. Object Representation
-3. Data types 
-4. Operations 
+3. Data types
+4. Operations
 5. Content formats
 
 ### 2.1. Object Representation
@@ -55,12 +59,12 @@ Attributes describe the metadata configuration, settings, and state of an object
 This abstraction allows application software to use simple APIs. For complex objects, linking of an object to another object through an object link resource is allowed. This enables the recursion to be handled at the object level, using design patterns similar to web linking. An application client can consume a devices API without knowing its structure and attributes a priori.
 
 
-### 2.2. Data types 
+### 2.2. Data types
 
 There are 7 data types, same as the ones defined in OMA LWM2M [3].
 
 1. String: A UTF-8 string, the minimum and/or maximum length of the String MAY be defined.
-2. Integer: An 8, 16, 32 or 64-bit signed integer. The valid range of the value for a Resource SHOULD be defined. This data type is also used for the purpose of enumeration. 
+2. Integer: An 8, 16, 32 or 64-bit signed integer. The valid range of the value for a Resource SHOULD be defined. This data type is also used for the purpose of enumeration.
 3. Float: A 32 or 64-bit floating point value. The valid range of the value for a Resource SHOULD be defined.
 4. Boolean: An integer with the value 0 for False and the value 1 for True.
 5. Opaque: A sequence of binary octets, the minimum and/or maximum length of the String MAY be defined.
@@ -68,11 +72,11 @@ There are 7 data types, same as the ones defined in OMA LWM2M [3].
 7. Object Link: The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bits unsigned integers following the Network Byte Order convention.
 
 
-### 2.3. Operations 
+### 2.3. Operations
 IPSO Objects and their resources have the same operations as their counterparts in the OMA LWM2M specification [3] with the same semantics.
 
-1. Resource values: Read, Write, Execute (restricted by the Access Type field) 
-2. Object Instances: Create, Delete (restricted by the Multiple Instances field) 
+1. Resource values: Read, Write, Execute (restricted by the Access Type field)
+2. Object Instances: Create, Delete (restricted by the Multiple Instances field)
 3. Objects and their instances: Read, Write
 4. Attributes: Set, Discover
 
@@ -83,12 +87,12 @@ IPSO Objects and their resources have the same operations as their counterparts 
 Content formats are those specified by the OMA LWM2M specification [3]:
 
 1. Resource values: text/plain, tlv
-2. Objects: text/senml+json, application/cbor, binary/tlv 
+2. Objects: text/senml+json, application/cbor, binary/tlv
 3. Attributes: link-format, link-format+json
 
 ## 3. Composite Objects
 
-As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed. 
+As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
 
 For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700 is ”generic object link”. Composite objects offer higher granularity than one large nested object would. An observer of a device represented as a composite object could reduce bandwidth utilization by observing only the linked object instances instead of the full object. Figure 3 shows an example, performing a GET operation to the IPSO thermostat composite object ”/8300/0/7100” would retrieve an object link to ”/3300/0”.
 
@@ -101,9 +105,9 @@ For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700
 
 For practical purposes we require a format for representing the objects in an unambiguous fashion. IPSO has used XML to the XML Schema in Appendix A, either hand-written or automatically generated from other sources. In the XML version, Integers, Floats and Time values must be represented as in the above subsection. Binary (Opaque) values must be represented in Base64-encoded form. Booleans must be represented using the lower-case strings true and false. XML definition documents may reference other XML definition documents using Include [5].
 
-### 4.2 Humidity Sensor 
+### 4.2 Humidity Sensor
 
-The following is a example of a humidity sensor that contains the sensor value, units, min and max measured values, min and max range values and a rest of those. 
+The following is a example of a humidity sensor that contains the sensor value, units, min and max measured values, min and max range values and a rest of those.
 # ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/humidity_object.png)
 
 
@@ -203,7 +207,7 @@ This first IPSO Smart Object Guideline describes 18 Smart Object types, includin
 
 This first object set is intended to be used as a starting place from which to build more objects and object sets, in order to address vertical application segments and new functional requirements for Smart Objects. The IPSO Alliance is committed to making it easy for people to create new objects based on their use case needs, while promoting reusable and cross-domain standards to as great an extent as is practical.
 
-    
+
 | Object 		| Object ID     |
 |:----------------------|:-----:|
 |    Digital 			|  3200 |
@@ -231,7 +235,7 @@ To complement the initial set of objects, this new IPSO Smart Object Expansion P
 
 Some of the new objects are generic in nature, such as voltage, altitude or percentage, while others are more specialized like the Color Object or the Gyrometer Object. New Actuators and Controllers are defined such as timer or buzzer and Joystick and Level. All of these objects were found to be necessary on a variety of use case domains.
 
-    
+
 | Object 				| Object ID   |
 |:----------------------|:-----------:|
 |    Voltage					| 3316|
