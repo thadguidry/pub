@@ -1,7 +1,8 @@
 # IP for Smart Objects
 
-## XML Validation
+## Validation
 
+We currently have continuous validation of the XML through Travis, in the future other automated test could be added. 
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
 ## Table of Contents
