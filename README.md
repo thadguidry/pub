@@ -1,11 +1,11 @@
-# IP for Smart Objects
+#IP for Smart Objects
 
-## Validation
+##Validation
 
-We currently have continuous validation of the XML through Travis, in the future other automated test could be added. 
+We currently have continuous validation of the XML through Travis, in the future other automated test could be added.
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
-## Table of Contents
+##Table of Contents
 1. [Introduction](#Introduction)
 2. [Components](#Data Model Components)
 3. [Composite Objects](#Composite Objects)
@@ -15,7 +15,7 @@ We currently have continuous validation of the XML through Travis, in the future
 7. [Application Specific Objects](#Smart Objects - Application Specific Objects)
 8. [References](#References)
 
-## 1. Introduction
+##1. Introduction
 Standards for constrained devices are rapidly consolidating and the availability of IP on constrained devices enabled these devices to easily connect to the Internet. The IETF has also created a set of specifications for such IP-enabled devices to work in a Web-like fashion. One such protocol is the Constrained Application Protocol (CoAP) [1] that provides request/response methods, ways to identify resources, discovery mechanisms, etc. similar to HTTP [2] but for use in constrained environments.
 
 However, the use of standardized protocols does not ensure interoperability on the application layer. Therefore, there is a clear need for being able to communicate using structured data models on top of protocols like CoAP and HTTP.
@@ -25,7 +25,7 @@ IPSO Smart Objects provide a common design pattern, an object model, to provide 
 **Developers can already use the Objects at the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml)**
 
 
-## 2. Data Model Components
+##2. Data Model Components
 
 The data model for IPSO Smart Objects consists of 5 parts:
 
@@ -91,7 +91,7 @@ Content formats are those specified by the OMA LWM2M specification [3]:
 2. Objects: text/senml+json, application/cbor, binary/tlv
 3. Attributes: link-format, link-format+json
 
-## 3. Composite Objects
+##3. Composite Objects
 
 As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
 
@@ -100,7 +100,7 @@ For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700
 
 # ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/linking.png)
 
-## 4. Examples and Extended References
+##4. Examples and Extended References
 
 ### 4.1 Definition documents
 
@@ -279,7 +279,7 @@ Apart from the basic object sets IPSO provide Objects sets from reusing existing
 Anyone can create new Objects from various Resources.
 
 
-## 5. References
+##5. References
 
 [1]		Z. Shelby, K. Hartke, and C. Bormann, “The Constrained Application Protocol (CoAP),” Internet Engineering Task Force, RFC 7252, Jun. 2014. [Online]. Available: http://www.rfc-editor.org/rfc/rfc7252.txt
 
