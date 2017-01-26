@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
+#If you are NOT familiar with IPSO Objects you should probably check the [IPSO README](https://github.com/IPSO-Alliance/pub/tree/master/README.md)
+
 # Smart Objects
 
 IPSO Smart Object Guidelines provide a common design pattern, an object model, that can effectively use the IETF CoAP protocol to provide high level interoperability between Smart Object devices and connected software applications on other devices and services.
@@ -32,7 +34,7 @@ This object set is intended to be used as a starting place from which to build m
 |    Frequency					| 3318|
 |    Depth						| 3319|
 |    Percentage					| 3320|
-|    altitude					| 3321|
+|    Altitude					| 3321|
 |    Load						| 3322|
 |    Pressure					| 3323|
 |    Loudness					| 3324|

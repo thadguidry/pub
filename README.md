@@ -5,26 +5,27 @@
 We currently have continuous validation of the XML through Travis, in the future other automated test could be added.
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
+#If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
+
 ##Table of Contents
 1. [Introduction](#Introduction)
-2. [Components](#Data Model Components)
+2. [Data Model Components](#Components)
 3. [Composite Objects](#Composite Objects)
-4. [Example](#Example and Extended References)
-5. [Starter Pack](#Smart Objects - Starter Pack)
-6. [Expansion Pack](#Smart Objects - Expansion Pack)
-7. [Application Specific Objects](#Smart Objects - Application Specific Objects)
-8. [References](#References)
+4. [Sample Object Definition](#Example)
+5. [Object and Resource ID registry](#Example)
+6. [Sample Implementations](#implementations)
 
-##1. Introduction
-Standards for constrained devices are rapidly consolidating and the availability of IP on constrained devices enabled these devices to easily connect to the Internet. The IETF has also created a set of specifications for such IP-enabled devices to work in a Web-like fashion. One such protocol is the Constrained Application Protocol (CoAP) [1] that provides request/response methods, ways to identify resources, discovery mechanisms, etc. similar to HTTP [2] but for use in constrained environments.
+
+<a name="Introduction"></a>
+## Introduction
+Standards for constrained devices are rapidly consolidating and the availability of IP on constrained devices enabled these devices to easily connect to the Internet. The IETF has also created a set of specifications for such IP-enabled devices to work in a Web-like fashion. One such protocol is the [Constrained Application Protocol (CoAP)](https://tools.ietf.org/html/rfc7252) that provides request/response methods, ways to identify resources, discovery mechanisms, etc. similar to the [Hypertext Transfer Protocol](https://tools.ietf.org/html/rfc2616) but for use in constrained environments.
 
 However, the use of standardized protocols does not ensure interoperability on the application layer. Therefore, there is a clear need for being able to communicate using structured data models on top of protocols like CoAP and HTTP.
 
-IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the Open Mobile Alliance Lightweight Specification (OMA LWM2M) [3], which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
-
-**Developers can already use the Objects at the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml)**
+IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the [Open Mobile Alliance Lightweight Specification (OMA LWM2M)](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20160407-C/OMA-TS-LightweightM2M-V1_0-20160407-C.pdf), which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
 
 
+<a name="Components"></a>
 ##2. Data Model Components
 
 The data model for IPSO Smart Objects consists of 5 parts:
@@ -42,7 +43,7 @@ Objects and resources are implicitly mapped into the URI path hierarchy by follo
 <object ID>/<object instance ID>/<resource ID>
 ```
 
-This URI template approach follows the Web Linking [4] and the IETF CoRE Link Format [5]. Objects are typed containers, which define the semantic type of instances. Instances represent specific object types at runtime, and allow Smart Object endpoints to expose multiple sensors and actuators of a particular type. Object instances are themselves containers for resources, which are the observable properties of an object.
+This URI template approach follows the [Web Linking](https://tools.ietf.org/html/rfc5988) and the [CoRE Link Format](https://tools.ietf.org/html/rfc5988) . Objects are typed containers, which define the semantic type of instances. Instances represent specific object types at runtime, and allow Smart Object endpoints to expose multiple sensors and actuators of a particular type. Object instances are themselves containers for resources, which are the observable properties of an object.
 
 For example, a temperature sensor example URI would be `3303/0/5700`:
 
@@ -55,7 +56,7 @@ For example, a temperature sensor example URI would be `3303/0/5700`:
 Semantically, the object type represents a single measurement, actuation, or control point for example a temperature sensor, a light (actuator), or an on-off switch (control point).
 A resource specifies a particular view or active property of an object. For example, a temperature sensor object might expose the current value (most recent reading), also the minimum and maximum possible reading, the minimum and maximum reading in an interval, and attributes like engineering units and application type.
 
-Attributes describe the metadata configuration, settings, and state of an object or resource, and are discoverable by reading the link-format data of an object or resource. Multiple attributes may be serialized in the link-format descriptors that an object exposes. Some attributes are immutable for a given object or resource type. For example, the static read, write, and execute capability attributes are derived from a Smart Object’s definition file, while other attributes, like the LWM2M Notification Attributes, are used to dynamically configure a particular object instance or resource. Attributes are represented using the IETF CoRE Link Format (RFC 6690) or an equivalent mapping to other content formats, for example, application/json+ld.
+Attributes describe the metadata configuration, settings, and state of an object or resource, and are discoverable by reading the link-format data of an object or resource. Multiple attributes may be serialized in the link-format descriptors that an object exposes. Some attributes are immutable for a given object or resource type. For example, the static read, write, and execute capability attributes are derived from a Smart Object’s definition file, while other attributes, like the LWM2M Notification Attributes, are used to dynamically configure a particular object instance or resource. Attributes are represented using [CoRE Link Format](https://tools.ietf.org/html/rfc5988) or an equivalent mapping to other content formats, for example, application/json+ld.
 
 This abstraction allows application software to use simple APIs. For complex objects, linking of an object to another object through an object link resource is allowed. This enables the recursion to be handled at the object level, using design patterns similar to web linking. An application client can consume a devices API without knowing its structure and attributes a priori.
 
@@ -81,30 +82,32 @@ IPSO Objects and their resources have the same operations as their counterparts 
 3. Objects and their instances: Read, Write
 4. Attributes: Set, Discover
 
-
-
 ### 2.4. Content formats
 
-Content formats are those specified by the OMA LWM2M specification [3]:
+Content formats are those specified by the OMA LWM2M specification:
 
 1. Resource values: text/plain, tlv
 2. Objects: text/senml+json, application/cbor, binary/tlv
 3. Attributes: link-format, link-format+json
 
+
+<a name="Composite Objects"></a>
 ##3. Composite Objects
 
-As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
+As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex fuel control actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
 
 For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700 is ”generic object link”. Composite objects offer higher granularity than one large nested object would. An observer of a device represented as a composite object could reduce bandwidth utilization by observing only the linked object instances instead of the full object. Figure 3 shows an example, performing a GET operation to the IPSO thermostat composite object ”/8300/0/7100” would retrieve an object link to ”/3300/0”.
 
-
 # ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/linking.png)
 
-##4. Examples and Extended References
+<a name="Examples"></a>
+##4. Sample Object Definition
 
 ### 4.1 Definition documents
 
-For practical purposes we require a format for representing the objects in an unambiguous fashion. IPSO has used XML to the XML Schema in Appendix A, either hand-written or automatically generated from other sources. In the XML version, Integers, Floats and Time values must be represented as in the above subsection. Binary (Opaque) values must be represented in Base64-encoded form. Booleans must be represented using the lower-case strings true and false. XML definition documents may reference other XML definition documents using Include [5].
+For practical purposes we require a format for representing the objects in an unambiguous fashion. IPSO has used XML to the XML Schema in Appendix A, either hand-written or automatically generated from other sources. In the XML version, Integers, Floats and Time values must be represented as in the above subsection. Binary (Opaque) values must be represented in Base64-encoded form. Booleans must be represented using the lower-case strings true and false.
+
+You can see the existing IPSO Objects in XML in the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml)
 
 ### 4.2 Humidity Sensor
 
@@ -113,7 +116,6 @@ The following is a example of a humidity sensor that contains the sensor value, 
 
 
 The following is the definition document for the Humidity Object in XML.
-
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -202,49 +204,38 @@ The following is the definition document for the Humidity Object in XML.
 </LWM2M>
 ```
 
-## 4.3. Smart Objects - Starter Pack
 
-This first IPSO Smart Object Guideline describes 18 Smart Object types, including a temperature sensor, a light controller, an accelerometer, a presence sensor, and other common sensor and actuator types representing a variety of use case domains. It is intended as a “Starter Pack” and example of how IPSO Smart Objects can be built to address some application specific use cases.
+<a name="list"></a>
+##5. List of registered Object IDs and Resource IDs.
 
-This first object set is intended to be used as a starting place from which to build more objects and object sets, in order to address vertical application segments and new functional requirements for Smart Objects. The IPSO Alliance is committed to making it easy for people to create new objects based on their use case needs, while promoting reusable and cross-domain standards to as great an extent as is practical.
-
-
-| Object 		| Object ID     |
-|:----------------------|:-----:|
-|    Digital 			|  3200 |
-|    Digital Output  	|  3201 |
-|    Analogue Input  	|  3202 |
-|    Analogue Output 	|  3203 |
-|    Generic Sensor  	|  3300 |
-|    Illuminance Sensor |  3301 |
-|    Presence sensor 	|  3302 |
-|    Temperature Sensor |  3303 |
-|    Humidity Sensor 	|  3304 |
-|    Power Measurement 	|  3305 |
-|    Actuation 			|  3306 |
-|    Set Point 			|  3308 |
-|    Load Control 		|  3310 |
-|    Light Control 		|  3311 |
-|    Power Control 		|  3312 |
-|    Accelerometer 		|  3313 |
-|    Magnetometer 		|  3314 |
-|    Barometer  	    |  3315 |
-
-## 4.4. Smart Objects - Expansion Pack
-
-To complement the initial set of objects, this new IPSO Smart Object Expansion Pack was created. The Expansion Pack covers a new set of 16 Common Template sensors, 6 Special template sensors, 5 Actuators and 6 Control switch types.  
-
-Some of the new objects are generic in nature, such as voltage, altitude or percentage, while others are more specialized like the Color Object or the Gyrometer Object. New Actuators and Controllers are defined such as timer or buzzer and Joystick and Level. All of these objects were found to be necessary on a variety of use case domains.
-
+Below is the set of registered Objects and their corresponding Object IDs.
 
 | Object 				| Object ID   |
 |:----------------------|:-----------:|
+|    Digital 					| 3200|
+|    Digital Output  			| 3201|
+|    Analogue Input  			| 3202|
+|    Analogue Output 			| 3203|
+|    Generic Sensor  			| 3300|
+|    Illuminance Sensor 		| 3301|
+|    Presence sensor 			| 3302|
+|    Temperature Sensor 		| 3303|
+|    Humidity Sensor 			| 3304|
+|    Power Measurement 			| 3305|
+|    Actuation 					| 3306|
+|    Set Point 					| 3308|
+|    Load Control 				| 3310|
+|    Light Control 				| 3311|
+|    Power Control 				| 3312|
+|    Accelerometer 				| 3313|
+|    Magnetometer 				| 3314|
+|    Barometer  	   		 	| 3315|
 |    Voltage					| 3316|
 |    Current					| 3317|
 |    Frequency					| 3318|
 |    Depth						| 3319|
 |    Percentage					| 3320|
-|    altitude					| 3321|
+|    Altitude					| 3321|
 |    Load						| 3322|
 |    Pressure					| 3323|
 |    Loudness					| 3324|
@@ -270,23 +261,119 @@ Some of the new objects are generic in nature, such as voltage, altitude or perc
 |    Push Button				| 3347|
 |    Level Controllers			| 3343|
 |    Up/Down Control			| 3344|
-|    Multistate Selector		| 3348|
+|    Multi-state Selector		| 3348|
 |    Multiple Axis Joystick		| 3345|
 
-## 4.5. Smart Objects - Application Specific Objects
 
-Apart from the basic object sets IPSO provide Objects sets from reusing existing Resources tailored to other use cases.
-Anyone can create new Objects from various Resources.
+Below there is the set of Resources that can be used as building blocks for your Objects.
+
+| Resource              | Resource ID   |
+|:--------------------------------|:---:|
+|    Digital Input State					| 5500|
+|    Digital Input Counter				| 5501|
+|    Digital Input Polarity				| 5502|
+|    Digital Input Debounce				| 5503|
+|    Digital Input Edge Selection	| 5504|
+|    Digital Input Counter Reset	| 5505|
+|    Current Time 	              | 5506|
+|    Fractional Time  	          | 5507|
+|    Min X Value	                | 5508|
+|    Max X Value	                | 5509|
+|    Min Y Value 	                | 5510|
+|    Max Y Value	                | 5511|
+|    Min Z Value 	                | 5512|
+|    Max Z Value                	| 5513|
+|    Latitude	                    | 5514|
+|    Longitude 	                  | 5515|
+|    Uncertainty 	                | 5516|
+|    Velocity 	                  | 5517|
+|    Timestamp                    | 5518|
+|    Min Limit                  	| 5519|
+|    Max Limit 	                  | 5520|
+|    Delay Duration             	| 5521|
+|    Clip 	                      | 5522|
+|    Trigger 	                    | 5523|
+|    Duration 	                  | 5524|
+|    Minimum Off-time             | 5525|
+|    Mode                         | 5526|
+|    Text                   	    | 5527|
+|    X Coordinate 	              | 5528|
+|    Y Coordinate 	              | 5529|
+|    Clear Display                | 5530|
+|    Contrast                     | 5531|
+|    Counter 	                    | 5534|
+|    Current Position             | 5536|
+|    Transition Time              | 5537|
+|    Remaining Time               | 5538|
+|    Up Counter                   | 5541|
+|    Down Counter 	              | 5542|
+|    Digital State 	              | 5543|
+|    Cumulative Time 	            | 5544|
+|    Max X Coordinate             | 5545|
+|    Max Y Coordinate 	          | 5546|
+|    Multi-state Input 	          | 5547|
+|    Digital Output State					| 5550|
+|    Digital Output Polarity			| 5551|
+|    Analog Input State					  | 5600|
+|    Min Measured Value           | 5601|
+|    Max Measured Value           | 5602|
+|    Min Range Value              | 5603|
+|    Max Range Value              | 5604|
+|Reset Min and Max Measured Values| 5605|
+|    Sensor Value	                | 5700|
+|    Sensor Units                 | 5701|
+|    X Value                      | 5702|
+|    Y Value                      | 5703|
+|    Z Value                      | 5704|
+|    Compass Direction            | 5705|
+|    Colour                       | 5706|
+|    Application Type	            | 5750|
+|    Sensor Type	                | 5751|
+|    Busy to Clear delay          | 5903|
+|    Clear to Busy delay          | 5904|
+|    Instantaneous active power   | 5800|
+|    Min Measured active power    | 5801|
+|    Max Measured active power    | 5802|
+|    Min Range active power       | 5803|
+|    Max Range active power       | 5804|
+|    Cumulative active power      | 5805|
+|    Active Power Calibration     | 5806|
+|    Instantaneous reactive power | 5810|
+|    Min Measured reactive power  | 5811|
+|    Max Measured reactive power  | 5812|
+|    Min Range reactive power     | 5813|
+|    Max Range reactive power     | 5814|
+|    Cumulative reactive power    | 5815|
+|    Reactive Power Calibration   | 5816|
+|    Power Factor                 | 5820|
+|    Current Calibration          | 5821|
+|    Reset Cumulative energy      | 5822|
+|    Event Identifier             | 5823|
+|    Start Time                   | 5824|
+|    Duration In Min              | 5825|
+|    Criticality Level            | 5826|
+|    Avg Load Adj Pct             | 5827|
+|    Duty Cycle                   | 5828|
+|    Increase Input State         | 5532|
+|    Decrease Input State         | 5533|
+|    On/Off                       | 5850|
+|    Dimmer                       | 5851|
+|    On Time                      | 5852|
+|    Muti-state Output            | 5853|
+|    Off Time                     | 5854|
+|    Set Point Value              | 5900|
 
 
-##5. References
+NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
+* Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
 
-[1]		Z. Shelby, K. Hartke, and C. Bormann, “The Constrained Application Protocol (CoAP),” Internet Engineering Task Force, RFC 7252, Jun. 2014. [Online]. Available: http://www.rfc-editor.org/rfc/rfc7252.txt
+<a name="implementation"></a>
+## 6. Sample Implementations
 
-[2]		R. Fielding, J. Gettys, J. Mogul, H. Frystyk, L. Masinter, P. Leach, and T. Berners-Lee, “Hypertext Transfer Protocol – HTTP/1.1,” Internet Engineering Task Force, RFC 2616, Jun. 1999. [Online]. Available: http://www.rfc-editor.org/rfc/rfc2616.txt
+* [JSON file]( https://github.com/eclipse/leshan/blob/master/leshan-core/src/main/resources/oma-objects-spec.json) of the supported LWM2M and IPSO Objects in [Leshan](http://www.eclipse.org/leshan/).
 
-[3]		O. M. Alliance, “Lightweight Machine-to-Machine Technical Specification v1.0, Candidate Enabler,” Dec. 2015. [Online]. Available: http: //technical.openmobilealliance.org/Technical/technical-information/release-program/current-releases/oma-lightweightm2m-v1-0
+* Sample [C package](https://github.com/contiki-os/contiki/tree/master/apps/ipso-objects) for use of IPSO Objects in [Contiki](http://www.contiki-os.org).
 
-[4]		M. Nottingham, “Web Linking,” Internet Engineering Task Force, RFC 5988, Oct. 2010. [Online]. Available: http://www.rfc-editor.org/rfc/rfc5988.txt
+* JS code templates of IPSO-defined devices [code templates](https://github.com/PeterEB/smartobject/blob/master/docs/templates.md). Each template gives a code snippet of how to initialize an _Object Instance_ with its `oid` and `iid`, and lists every _Resource_ the _Object Instance_ **may** have.  
 
-[5]		Z. Shelby, “Constrained RESTful Environments (CoRE) Link Format,” Internet Engineering Task Force, RFC 6690, Aug. 2012. [Online]. Available: http://www.rfc- editor.org/rfc/rfc6690.txt
+* Sample [Smart Objects](https://npm.taobao.org/package/smartobject) Class can be used to create IPSO Smart Objects in your JavaScript applications. If you like to use the IPSO data model in your projects or products, you can use smartobject as the base class to abstract your hardware, sensor modules, or gadgets into plugins (node.js packages) for users convenience.
