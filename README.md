@@ -5,7 +5,7 @@
 We currently have continuous validation of the XML through Travis, in the future other automated test could be added.
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
-#If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
+###If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
 
 ##Table of Contents
 1. [Introduction](#Introduction)
@@ -364,9 +364,6 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Set Point Value              | 5900|
 
 
-NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
-* Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
-
 <a name="implementation"></a>
 ## 6. Sample Implementations
 
@@ -377,3 +374,7 @@ NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) 
 * JS code templates of IPSO-defined devices [code templates](https://github.com/PeterEB/smartobject/blob/master/docs/templates.md). Each template gives a code snippet of how to initialize an _Object Instance_ with its `oid` and `iid`, and lists every _Resource_ the _Object Instance_ **may** have.  
 
 * Sample [Smart Objects](https://npm.taobao.org/package/smartobject) Class can be used to create IPSO Smart Objects in your JavaScript applications. If you like to use the IPSO data model in your projects or products, you can use smartobject as the base class to abstract your hardware, sensor modules, or gadgets into plugins (node.js packages) for users convenience.
+
+
+NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
+* Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
