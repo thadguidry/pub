@@ -5,6 +5,8 @@
 We currently have continuous validation of the XML through Travis, in the future other automated test could be added.
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
+Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
+
 ###If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
 
 ##Table of Contents
@@ -387,6 +389,3 @@ If you have specific apps or gadgets that need to be covered by IPSO Objects you
 ---
 
 Authored by [@jaimejim](https://github.com/jaimejim) - 2017 IPSO Alliance
-
-NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
-* Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
