@@ -8,15 +8,15 @@ We currently have continuous validation of the XML through Travis, in the future
 ###If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
 
 ##Table of Contents
-1. [Introduction](#Introduction)
-2. [Data Model Components](#Components)
-3. [Composite Objects](#Composite Objects)
-4. [Sample Object Definition](#Example)
-5. [Object and Resource ID registry](#Example)
+1. [Introduction](#intro)
+2. [Data Model Components](#components)
+3. [Composite Objects](#composite)
+4. [Sample Object Definition](#definition)
+5. [Object and Resource ID registry](#registry)
 6. [Sample Implementations](#implementations)
 
 
-<a name="Introduction"></a>
+<a name="introduction"></a>
 ## Introduction
 Standards for constrained devices are rapidly consolidating and the availability of IP on constrained devices enabled these devices to easily connect to the Internet. The IETF has also created a set of specifications for such IP-enabled devices to work in a Web-like fashion. One such protocol is the [Constrained Application Protocol (CoAP)](https://tools.ietf.org/html/rfc7252) that provides request/response methods, ways to identify resources, discovery mechanisms, etc. similar to the [Hypertext Transfer Protocol](https://tools.ietf.org/html/rfc2616) but for use in constrained environments.
 
@@ -25,7 +25,7 @@ However, the use of standardized protocols does not ensure interoperability on t
 IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the [Open Mobile Alliance Lightweight Specification (OMA LWM2M)](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20160407-C/OMA-TS-LightweightM2M-V1_0-20160407-C.pdf), which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
 
 
-<a name="Components"></a>
+<a name="components"></a>
 ##2. Data Model Components
 
 The data model for IPSO Smart Objects consists of 5 parts:
@@ -91,7 +91,7 @@ Content formats are those specified by the OMA LWM2M specification:
 3. Attributes: link-format, link-format+json
 
 
-<a name="Composite Objects"></a>
+<a name="composite"></a>
 ##3. Composite Objects
 
 As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex fuel control actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
@@ -100,7 +100,7 @@ For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700
 
 # ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/linking.png)
 
-<a name="Examples"></a>
+<a name="definition"></a>
 ##4. Sample Object Definition
 
 ### 4.1 Definition documents
@@ -205,7 +205,7 @@ The following is the definition document for the Humidity Object in XML.
 ```
 
 
-<a name="list"></a>
+<a name="registry"></a>
 ##5. List of registered Object IDs and Resource IDs.
 
 Below is the set of registered Objects and their corresponding Object IDs.
@@ -364,7 +364,7 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Set Point Value              | 5900|
 
 
-<a name="implementation"></a>
+<a name="implementations"></a>
 ## 6. Sample Implementations
 
 * [JSON file]( https://github.com/eclipse/leshan/blob/master/leshan-core/src/main/resources/oma-objects-spec.json) of the supported LWM2M and IPSO Objects in [Leshan](http://www.eclipse.org/leshan/).
