@@ -1,8 +1,9 @@
-#IP for Smart Objects
+#IP for Smart Objects - IPSO Objects
 
-##Validation
+A common object model for interoperability of IoT Devices and Applications.
 
-We currently have continuous validation of the XML through Travis, in the future other automated test could be added.
+---
+
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
 Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
@@ -18,6 +19,8 @@ Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if y
 6. [Sample Implementations](#implementations)
 7. [Creating new Objects](#newobjects)
 
+---
+
 <a name="introduction"></a>
 ## Introduction
 Standards for constrained devices are rapidly consolidating and the availability of IP on constrained devices enabled these devices to easily connect to the Internet. The IETF has also created a set of specifications for such IP-enabled devices to work in a Web-like fashion. One such protocol is the [Constrained Application Protocol (CoAP)](https://tools.ietf.org/html/rfc7252) that provides request/response methods, ways to identify resources, discovery mechanisms, etc. similar to the [Hypertext Transfer Protocol](https://tools.ietf.org/html/rfc2616) but for use in constrained environments.
@@ -26,6 +29,7 @@ However, the use of standardized protocols does not ensure interoperability on t
 
 IPSO Smart Objects provide a common design pattern, an object model, to provide high level interoperability between Smart Object devices and connected software applications on other devices and services. IPSO Objects are defined in such a way that they do not depend on the use of CoAP, any RESTful protocol is sufficient. Nevertheless, to develop a complete and interoperable solution the Object model is based on the [Open Mobile Alliance Lightweight Specification (OMA LWM2M)](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20160407-C/OMA-TS-LightweightM2M-V1_0-20160407-C.pdf) and the [OMNA Registry](http://www.openmobilealliance.org/wp/OMNA/LwM2M/LwM2MRegistry.html), which is a set of management interfaces built on top of CoAP in order to enable device management operations (bootstrapping, firmware updates, error reporting, etc.). While LWM2M uses objects with fixed mandatory resources, IPSO Smart Objects use a more reusable design.
 
+---
 
 <a name="components"></a>
 ##2. Data Model Components
@@ -92,6 +96,7 @@ Content formats are those specified by the OMA LWM2M specification:
 2. Objects: text/senml+json, application/cbor, binary/tlv
 3. Attributes: link-format, link-format+json
 
+---
 
 <a name="composite"></a>
 ##3. Composite Objects
@@ -101,6 +106,8 @@ As devices increase in complexity (e.g., from a sensor to an appliance, from a s
 For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700 is ”generic object link”. Composite objects offer higher granularity than one large nested object would. An observer of a device represented as a composite object could reduce bandwidth utilization by observing only the linked object instances instead of the full object. Figure 3 shows an example, performing a GET operation to the IPSO thermostat composite object ”/8300/0/7100” would retrieve an object link to ”/3300/0”.
 
 # ![IPSO Object](https://github.com/IPSO-Alliance/pub/blob/master/linking.png)
+
+---
 
 <a name="definition"></a>
 ##4. Sample Object Definition
@@ -206,6 +213,7 @@ The following is the definition document for the Humidity Object in XML.
 </LWM2M>
 ```
 
+---
 
 <a name="registry"></a>
 ##5. List of registered Object IDs and Resource IDs.
@@ -365,6 +373,7 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Off Time                     | 5854|
 |    Set Point Value              | 5900|
 
+---
 
 <a name="implementations"></a>
 ## 6. Sample Implementations
@@ -376,6 +385,10 @@ Below there is the set of Resources that can be used as building blocks for your
 * JS code templates of IPSO-defined devices [code templates](https://github.com/PeterEB/smartobject/blob/master/docs/templates.md). Each template gives a code snippet of how to initialize an _Object Instance_ with its `oid` and `iid`, and lists every _Resource_ the _Object Instance_ **may** have.  
 
 * Sample [Smart Objects](https://npm.taobao.org/package/smartobject) Class can be used to create IPSO Smart Objects in your JavaScript applications. If you like to use the IPSO data model in your projects or products, you can use smartobject as the base class to abstract your hardware, sensor modules, or gadgets into plugins (node.js packages) for users convenience.
+
+* [BIPSO](https://bluetoother.github.io/bipso/#/characteristic) is born to solve this problem of consistency and compatibility for BLE applications. It defines a set of BLE Characteristics that follows the IPSO Smart Object Guideline for developers to build their applications with an unified data model.
+
+---
 
 <a name="newobjects"></a>
 ## 7. Creating new Objects
