@@ -222,26 +222,6 @@ The following is the definition document for the Humidity Object in XML.
 
 Below is the set of registered Objects and their corresponding Object IDs.
 
-
-|                                            |                                              |                                               |                                                   |
-|--------------------------------------------|----------------------------------------------|-----------------------------------------------|---------------------------------------------------|
-| 3200 [Digital Input](#tmpl_digitalInput)   | 3201 [Digital Output](#tmpl_digitalOutput)   | 3202 [Analog Input](#tmpl_analogInput)        | 3203 [Analog Output](#tmpl_analogOutput)          |
-| 3300 [Generic Sensor](#tmpl_genericSensor) | 3301 [Illuminance Sensor](#tmpl_illumSensor) | 3302 [Presence Sensor](#tmpl_presenceSensor)  | 3303 [Temperature Sensor](#tmpl_temperature)      |
-| 3304 [Humidity Sensor](#tmpl_humidity)     | 3305 [Power Measurement](#tmpl_pwrMea)       | 3306 [Actuation](#tmpl_actuation)             | 3308 [Set Point](#tmpl_setPoint)                  |
-| 3310 [Load Control](#tmpl_loadCtrl)        | 3311 [Light Control](#tmpl_lightCtrl)        | 3312 [Power Control](#tmpl_pwrCtrl)           | 3313 [Accelerometer](#tmpl_accelerometer)         |
-| 3314 [Magnetometer](#tmpl_magnetometer)    | 3315 [Barometer](#tmpl_barometer)            | 3316 [Voltage](#tmpl_common)                  | 3317 [Current](#tmpl_common)                      |
-| 3318 [Frequency](#tmpl_common)             | 3319 [Depth](#tmpl_common)                   | 3320 [Percentage](#tmpl_common)               | 3321 [Altitude](#tmpl_common)                     |
-| 3322 [Load](#tmpl_common)                  | 3323 [Pressure](#tmpl_common)                | 3324 [Loudness](#tmpl_common)                 | 3325 [Concentration](#tmpl_common)                |
-| 3326 [Acidity](#tmpl_common)               | 3327 [Conductivity](#tmpl_common)            | 3328 [Power](#tmpl_common)                    | 3329 [Power Factor](#tmpl_common)                 |
-| 3330 [Distance](#tmpl_common)              | 3331 [Energy](#tmpl_energy)                  | 3332 [Direction](#tmpl_direction)             | 3333 [Time](#tmpl_time)                           |
-| 3334 [Gyrometer](#tmpl_gyrometer)          | 3335 [Colour](#tmpl_colour)                  | 3336 [GPS Location](#tmpl_gpsLocation)        | 3337 [Positioner](#tmpl_positioner)               |
-| 3338 [Buzzer](#tmpl_buzzer)                | 3339 [Audio Clip](#tmpl_clip)                | 3340 [Timer](#tmpl_timer)                     | 3341 [Addressable Text Display](#tmpl_display)    |
-| 3342 [On/Off Switch](#tmpl_switch)         | 3343 [Level Controller](#tmpl_level)         | 3344 [Up/Down Controller](#tmpl_updown)       | 3345 [Multiple Axis Joystick](#tmpl_joystick)     |
-| 3346 [Rate](#tmpl_rate)                    | 3347 [Push Button](#tmpl_button)             | 3348 [Multi-state Selector](#tmpl_mselector)  |                                                   |
-|                                            |                                              |                                               |                                                   |
-
-
-
 | Object 				| Object ID   |
 |:----------------------|:-----------:|
 |    Digital 					| 3200|
