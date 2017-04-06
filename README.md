@@ -2,17 +2,17 @@
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
 
-#IP for Smart Objects - IPSO Objects
+# IP for Smart Objects - IPSO Objects
 
 A common object model for interoperability of IoT Devices and Applications.
 
 Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
 
-###If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
+If you are familiar with IPSO Objects you can fetch them from the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or directly check some of the [sample implementations](#implementations)
 
 ---
 
-##Table of Contents
+## Table of Contents
 1. [Introduction](#intro)
 2. [Data Model Components](#components)
 3. [Composite Objects](#composite)
@@ -34,7 +34,7 @@ IPSO Smart Objects provide a common design pattern, an object model, to provide 
 ---
 
 <a name="components"></a>
-##2. Data Model Components
+## 2. Data Model Components
 
 The data model for IPSO Smart Objects consists of 5 parts:
 
@@ -101,7 +101,7 @@ Content formats are those specified by the OMA LWM2M specification:
 ---
 
 <a name="composite"></a>
-##3. Composite Objects
+## 3. Composite Objects
 
 As devices increase in complexity (e.g., from a sensor to an appliance, from a switch to a complex fuel control actuator) the need to link resources to create more complex objects or ”Composite Objects” arises. Such a composite object can, for example, be constructed with a single reusable type ”generic composite object” with one ID. The resources may be of a generic reusable link type, also using a single ID, with multiple instances allowed.
 
@@ -112,7 +112,7 @@ For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700
 ---
 
 <a name="definition"></a>
-##4. Sample Object Definition
+## 4. Sample Object Definition
 
 ### 4.1 Definition documents
 
@@ -218,7 +218,7 @@ The following is the definition document for the Humidity Object in XML.
 ---
 
 <a name="registry"></a>
-##5. List of registered Object IDs and Resource IDs.
+## 5. List of registered Object IDs and Resource IDs.
 
 Below is the set of registered Objects and their corresponding Object IDs.
 
