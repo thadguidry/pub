@@ -92,11 +92,11 @@ IPSO Objects and their resources have the same operations as their counterparts 
 
 ### 2.4. Content formats
 
-Content formats are those specified by the OMA LWM2M specification:
+Content formats are those specified by the OMA LWM2M TS 1.0 and SenML specifications:
 
-1. Resource values: text/plain, tlv
-2. Objects: text/senml+json, application/cbor, binary/tlv
-3. Attributes: link-format, link-format+json
+1. Resource values: text/plain, application/vnd.oma.lwm2m+tlv, application/senml+json, application/senml+cbor
+2. Objects: application/senml+json, application/senml+cbor, application/vnd.oma.lwm2m+tlv
+3. Attributes: link-format, link-format+json, link-format+cbor
 
 ---
 
