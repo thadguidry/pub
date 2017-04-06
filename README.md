@@ -92,7 +92,7 @@ IPSO Objects and their resources have the same operations as their counterparts 
 
 ### 2.4. Content formats
 
-Content formats are those specified by the OMA LWM2M TS 1.0 and SenML specifications:
+Content formats are those specified by the OMA LWM2M TS 1.0 [LWM2M] and SenML specifications [SenML]:
 
 1. Resource values: text/plain, application/vnd.oma.lwm2m+tlv, application/senml+json, application/senml+cbor
 2. Objects: application/senml+json, application/senml+cbor, application/vnd.oma.lwm2m+tlv
@@ -400,6 +400,15 @@ The tools and links above provide sufficient information to get started with IPS
 If you happen to find some basic Object that you feel should be registered, you can do a pull request on the master branch and commit the new Object to the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or [OMNA Registry](http://www.openmobilealliance.org/wp/OMNA/LwM2M/LwM2MRegistry.html). We will then add it there if it is needed.
 
 If you have specific apps or gadgets that need to be covered by IPSO Objects you can create your own Application-Specific Objects.
+
+---
+
+<a name="references"></a>
+## 8. References
+
+[LWM2M] "Lightweight Machine to Machine Technical Specification, Approved Version 1.0". Feb 2017. [OMA-TS-LightweightM2M-V1_0-20170208-A.pdf](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf)
+
+[SenML] "Media Types for Sensor Measurement Lists (SenML)". March 2017. [draft-ietf-core-senml-05](https://tools.ietf.org/html/draft-ietf-core-senml-05)
 
 ---
 
