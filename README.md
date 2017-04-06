@@ -51,9 +51,9 @@ Objects and resources are implicitly mapped into the URI path hierarchy by follo
 <object ID>/<object instance ID>/<resource ID>
 ```
 
-This URI template approach follows the [Web Linking](https://tools.ietf.org/html/rfc5988) and the [CoRE Link Format](https://tools.ietf.org/html/rfc5988) . Objects are typed containers, which define the semantic type of instances. Instances represent specific object types at runtime, and allow Smart Object endpoints to expose multiple sensors and actuators of a particular type. Object instances are themselves containers for resources, which are the observable properties of an object.
+This URI template approach follows the [Web Linking](https://tools.ietf.org/html/rfc5988) and the [CoRE Link Format](https://tools.ietf.org/html/rfc5988) . Objects are typed containers, which define the semantic type of instances. Instances represent specific object types at runtime, and allow Smart Object endpoints to expose multiple sensors and actuators of a particular type. Object instances are themselves containers for resources, which are the observable properties or targets for actuation of an object.
 
-For example, a temperature sensor example URI would be `3303/0/5700`:
+An example of a temperature sensor URI would be `coap://device1.example.com/3303/0/5700`:
 
 ```
 3300  -> Temperature Sensor
@@ -61,7 +61,7 @@ For example, a temperature sensor example URI would be `3303/0/5700`:
 5700  -> resource having the current value or a most recent reading
 ```
 
-Semantically, the object type represents a single measurement, actuation, or control point for example a temperature sensor, a light (actuator), or an on-off switch (control point).
+Semantically, the object type represents a single measurement source, actuation, or control point for example a temperature sensor, a light (actuator), or an on-off switch (control point).
 A resource specifies a particular view or active property of an object. For example, a temperature sensor object might expose the current value (most recent reading), also the minimum and maximum possible reading, the minimum and maximum reading in an interval, and attributes like engineering units and application type.
 
 Attributes describe the metadata configuration, settings, and state of an object or resource, and are discoverable by reading the link-format data of an object or resource. Multiple attributes may be serialized in the link-format descriptors that an object exposes. Some attributes are immutable for a given object or resource type. For example, the static read, write, and execute capability attributes are derived from a Smart Object’s definition file, while other attributes, like the LWM2M Notification Attributes, are used to dynamically configure a particular object instance or resource. Attributes are represented using [CoRE Link Format](https://tools.ietf.org/html/rfc5988) or an equivalent mapping to other content formats, for example, application/json+ld.
@@ -116,7 +116,7 @@ For example, ’4000/0/6700/0’ where 4000 is a ”composite object” and 6700
 
 ### 4.1 Definition documents
 
-For practical purposes we require a format for representing the objects in an unambiguous fashion. IPSO has used XML to the XML Schema in Appendix A, either hand-written or automatically generated from other sources. In the XML version, Integers, Floats and Time values must be represented as in the above subsection. Binary (Opaque) values must be represented in Base64-encoded form. Booleans must be represented using the lower-case strings true and false.
+For practical purposes we require a format for representing the objects in an unambiguous fashion. IPSO has used XML to the XML Schema in Appendix A, either manually created or automatically generated from other sources. In the XML version, Integers, Floats and Time values must be represented as in the above subsection. Binary (Opaque) values must be represented in Base64-encoded form. Booleans must be represented using the lower-case strings true and false.
 
 You can see the existing IPSO Objects in XML in the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml)
 
