@@ -67,7 +67,7 @@ This object set is intended to be used as a starting place from which to build m
 Below there is the set of Resources that can be used as building blocks for your Objects.
 
 | Resource              | Resource ID   | Operations |
-|:--------------------------------|:---:|
+|:--------------------------------|:---:|:----------:|
 |    Digital Input State					| 5500|           R|
 |    Digital Input Counter				| 5501|           R|
 |    Digital Input Polarity				| 5502|         R,W|
