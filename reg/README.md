@@ -66,102 +66,107 @@ This object set is intended to be used as a starting place from which to build m
 
 Below there is the set of Resources that can be used as building blocks for your Objects.
 
-| Resource              | Resource ID   |
+| Resource              | Resource ID   | Operations |
 |:--------------------------------|:---:|
-|    Digital Input State					| 5500|
-|    Digital Input Counter				| 5501|
-|    Digital Input Polarity				| 5502|
-|    Digital Input Debounce				| 5503|
-|    Digital Input Edge Selection	| 5504|
-|    Digital Input Counter Reset	| 5505|
-|    Current Time 	              | 5506|
-|    Fractional Time  	          | 5507|
-|    Min X Value	                | 5508|
-|    Max X Value	                | 5509|
-|    Min Y Value 	                | 5510|
-|    Max Y Value	                | 5511|
-|    Min Z Value 	                | 5512|
-|    Max Z Value                	| 5513|
-|    Latitude	                    | 5514|
-|    Longitude 	                  | 5515|
-|    Uncertainty 	                | 5516|
-|    Velocity 	                  | 5517|
-|    Timestamp                    | 5518|
-|    Min Limit                  	| 5519|
-|    Max Limit 	                  | 5520|
-|    Delay Duration             	| 5521|
-|    Clip 	                      | 5522|
-|    Trigger 	                    | 5523|
-|    Duration 	                  | 5524|
-|    Minimum Off-time             | 5525|
-|    Mode                         | 5526|
-|    Text                   	    | 5527|
-|    X Coordinate 	              | 5528|
-|    Y Coordinate 	              | 5529|
-|    Clear Display                | 5530|
-|    Contrast                     | 5531|
-|    Counter 	                    | 5534|
-|    Current Position             | 5536|
-|    Transition Time              | 5537|
-|    Remaining Time               | 5538|
-|    Up Counter                   | 5541|
-|    Down Counter 	              | 5542|
-|    Digital State 	              | 5543|
-|    Cumulative Time 	            | 5544|
-|    Max X Coordinate             | 5545|
-|    Max Y Coordinate 	          | 5546|
-|    Multi-state Input 	          | 5547|
-|    Digital Output State					| 5550|
-|    Digital Output Polarity			| 5551|
-|    Analog Input State					  | 5600|
-|    Min Measured Value           | 5601|
-|    Max Measured Value           | 5602|
-|    Min Range Value              | 5603|
-|    Max Range Value              | 5604|
-|Reset Min and Max Measured Values| 5605|
-|    Sensor Value	                | 5700|
-|    Sensor Units                 | 5701|
-|    X Value                      | 5702|
-|    Y Value                      | 5703|
-|    Z Value                      | 5704|
-|    Compass Direction            | 5705|
-|    Colour                       | 5706|
-|    Application Type	            | 5750|
-|    Sensor Type	                | 5751|
-|    Busy to Clear delay          | 5903|
-|    Clear to Busy delay          | 5904|
-|    Instantaneous active power   | 5800|
-|    Min Measured active power    | 5801|
-|    Max Measured active power    | 5802|
-|    Min Range active power       | 5803|
-|    Max Range active power       | 5804|
-|    Cumulative active power      | 5805|
-|    Active Power Calibration     | 5806|
-|    Instantaneous reactive power | 5810|
-|    Min Measured reactive power  | 5811|
-|    Max Measured reactive power  | 5812|
-|    Min Range reactive power     | 5813|
-|    Max Range reactive power     | 5814|
-|    Cumulative reactive power    | 5815|
-|    Reactive Power Calibration   | 5816|
-|    Power Factor                 | 5820|
-|    Current Calibration          | 5821|
-|    Reset Cumulative energy      | 5822|
-|    Event Identifier             | 5823|
-|    Start Time                   | 5824|
-|    Duration In Min              | 5825|
-|    Criticality Level            | 5826|
-|    Avg Load Adj Pct             | 5827|
-|    Duty Cycle                   | 5828|
-|    Increase Input State         | 5532|
-|    Decrease Input State         | 5533|
-|    On/Off                       | 5850|
-|    Dimmer                       | 5851|
-|    On Time                      | 5852|
-|    Muti-state Output            | 5853|
-|    Off Time                     | 5854|
-|    Set Point Value              | 5900|
-
+|    Digital Input State					| 5500|           R|
+|    Digital Input Counter				| 5501|           R|
+|    Digital Input Polarity				| 5502|         R,W|
+|    Digital Input Debounce				| 5503|         R,W|
+|    Digital Input Edge Selection	| 5504|         R,W|
+|    Digital Input Counter Reset	| 5505|           E|
+|    Current Time 	              | 5506|         R,W|
+|    Fractional Time  	          | 5507|         R,W|
+|    Min X Value	                | 5508|           R|
+|    Max X Value	                | 5509|           R|
+|    Min Y Value 	                | 5510|           R|
+|    Max Y Value	                | 5511|           R|
+|    Min Z Value 	                | 5512|           R|
+|    Max Z Value                	| 5513|           R|
+|    Latitude	                    | 5514|           R|
+|    Longitude 	                  | 5515|           R|
+|    Uncertainty 	                | 5516|           R|
+|    Velocity 	                  | 5517|           R|
+|    Timestamp                    | 5518|           R|
+|    Min Limit                  	| 5519|           R|
+|    Max Limit 	                  | 5520|           R|
+|    Delay Duration             	| 5521|         R,W|
+|    Clip 	                      | 5522|         R,W|
+|    Trigger 	                    | 5523|           E|
+|    Duration 	                  | 5524|         R,W|
+|    Minimum Off-time             | 5525|         R,W|
+|    Mode                         | 5526|         R,W|
+|    Text                   	    | 5527|         R,W|
+|    X Coordinate 	              | 5528|         R,W|
+|    Y Coordinate 	              | 5529|         R,W|
+|    Clear Display                | 5530|           E|
+|    Contrast                     | 5531|         R,W|
+|    Increase Input State         | 5532|           R|
+|    Decrease Input State         | 5533|           R|
+|    Counter 	                    | 5534|         R,W|
+|    Current Position             | 5536|         R,W|
+|    Transition Time              | 5537|         R,W|
+|    Remaining Time               | 5538|           R|
+|    Up Counter                   | 5541|         R,W|
+|    Down Counter 	              | 5542|         R,W|
+|    Digital State 	              | 5543|           R|
+|    Cumulative Time 	            | 5544|         R,W|
+|    Max X Coordinate             | 5545|           R|
+|    Max Y Coordinate 	          | 5546|           R|
+|    Multi-state Input 	          | 5547|           R|
+|    Level             	          | 5548|         R,W|
+|    Digital Output State					| 5550|         R,W|
+|    Digital Output Polarity			| 5551|         R,W|
+|    Analog Input State					  | 5600|           R|
+|    Min Measured Value           | 5601|           R|
+|    Max Measured Value           | 5602|           R|
+|    Min Range Value              | 5603|           R|
+|    Max Range Value              | 5604|           R|
+|Reset Min and Max Measured Values| 5605|           E|
+|    Analog Output Current Value  | 5650|         R,W|  
+|    Sensor Value	                | 5700|           R|
+|    Sensor Units                 | 5701|           R|
+|    X Value                      | 5702|           R|
+|    Y Value                      | 5703|           R|
+|    Z Value                      | 5704|           R|
+|    Compass Direction            | 5705|           R|
+|    Colour                       | 5706|         R,W|
+|    Application Type	            | 5750|         R,W|
+|    Sensor Type	                | 5751|           R|
+|    Busy to Clear delay          | 5903|         R,W|
+|    Clear to Busy delay          | 5904|         R,W|
+|    Instantaneous active power   | 5800|           R|
+|    Min Measured active power    | 5801|           R|
+|    Max Measured active power    | 5802|           R|
+|    Min Range active power       | 5803|           R|
+|    Max Range active power       | 5804|           R|
+|    Cumulative active power      | 5805|           R|
+|    Active Power Calibration     | 5806|           W|
+|    Instantaneous reactive power | 5810|           R|
+|    Min Measured reactive power  | 5811|           R|
+|    Max Measured reactive power  | 5812|           R|
+|    Min Range reactive power     | 5813|           R|
+|    Max Range reactive power     | 5814|           R|
+|    Cumulative reactive power    | 5815|           R|
+|    Reactive Power Calibration   | 5816|           W|
+|    Power Factor                 | 5820|           R|
+|    Current Calibration          | 5821|         R,W|
+|    Reset Cumulative energy      | 5822|           E|
+|    Event Identifier             | 5823|         R,W|
+|    Start Time                   | 5824|         R,W|
+|    Duration In Min              | 5825|         R,W|
+|    Criticality Level            | 5826|         R,W|
+|    Avg Load Adj Pct             | 5827|         R,W|
+|    Duty Cycle                   | 5828|         R,W|
+|    Increase Input State         | 5532|           R|
+|    Decrease Input State         | 5533|           R|
+|    On/Off                       | 5850|         R,W|
+|    Dimmer                       | 5851|         R,W|
+|    On Time                      | 5852|         R,W|
+|    Muti-state Output            | 5853|         R,W|
+|    Off Time                     | 5854|         R,W|
+|    Set Point Value              | 5900|         R,W|
+|    Busy to Clear delay          | 5903|         R,W|
+|    Clear to Busy delay          | 5904|         R,W|
 
 NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
 * Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
