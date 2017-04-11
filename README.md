@@ -1,7 +1,6 @@
 
 [![Build Status](https://travis-ci.org/IPSO-Alliance/pub.svg?branch=master)](https://travis-ci.org/IPSO-Alliance/pub)
 
-
 # IP for Smart Objects - IPSO Objects
 
 A common object model for interoperability of IoT Devices and Applications.
