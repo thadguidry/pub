@@ -70,7 +70,7 @@ This abstraction allows application software to use simple APIs. For complex obj
 
 ### 2.2. Data types
 
-There are 7 data types, same as the ones defined in OMA LWM2M [3].
+There are 7 data types, same as the ones defined in OMA LWM2M [1].
 
 1. String: A UTF-8 string, the minimum and/or maximum length of the String MAY be defined.
 2. Integer: An 8, 16, 32 or 64-bit signed integer. The valid range of the value for a Resource SHOULD be defined. This data type is also used for the purpose of enumeration.
@@ -82,7 +82,7 @@ There are 7 data types, same as the ones defined in OMA LWM2M [3].
 
 
 ### 2.3. Operations
-IPSO Objects and their resources have the same operations as their counterparts in the OMA LWM2M specification [3] with the same semantics.
+IPSO Objects and their resources have the same operations as their counterparts in the OMA LWM2M specification [1] with the same semantics.
 
 1. Resource values: Read, Write, Execute (restricted by the Access Type field)
 2. Object Instances: Create, Delete (restricted by the Multiple Instances field)
@@ -91,11 +91,11 @@ IPSO Objects and their resources have the same operations as their counterparts 
 
 ### 2.4. Content formats
 
-Content formats are those specified by the OMA LWM2M specification:
+Content formats are those specified by the OMA LWM2M TS 1.0 [1] and SenML [2] specifications:
 
-1. Resource values: text/plain, tlv
-2. Objects: text/senml+json, application/cbor, binary/tlv
-3. Attributes: link-format, link-format+json
+1. Resource values: text/plain, application/vnd.oma.lwm2m+tlv, application/senml+json, application/senml+cbor
+2. Objects: application/senml+json, application/senml+cbor, application/vnd.oma.lwm2m+tlv
+3. Attributes: link-format, link-format+json, link-format+cbor
 
 ---
 
@@ -248,6 +248,15 @@ The tools and links above provide sufficient information to get started with IPS
 If you happen to find some basic Object that you feel should be registered, you can do a pull request on the master branch and commit the new Object to the [IPSO Registry](https://github.com/IPSO-Alliance/pub/tree/master/reg/xml) or [OMNA Registry](http://www.openmobilealliance.org/wp/OMNA/LwM2M/LwM2MRegistry.html). We will then add it there if it is needed.
 
 If you have specific apps or gadgets that need to be covered by IPSO Objects you can create your own Application-Specific Objects.
+
+---
+
+<a name="references"></a>
+## 8. References
+
+[1] "Lightweight Machine to Machine Technical Specification, Approved Version 1.0". Feb 2017. [OMA-TS-LightweightM2M-V1_0-20170208-A.pdf](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf)
+
+[2] "Media Types for Sensor Measurement Lists (SenML)". March 2017. [draft-ietf-core-senml-05](https://tools.ietf.org/html/draft-ietf-core-senml-05)
 
 ---
 
