@@ -70,7 +70,7 @@ This abstraction allows application software to use simple APIs. For complex obj
 
 ### 2.2. Data types
 
-There are 7 data types, same as the ones defined in OMA LWM2M [1].
+There are 7 data types, same as the ones defined in [OMA LWM2M](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf).
 
 1. String: A UTF-8 string, the minimum and/or maximum length of the String MAY be defined.
 2. Integer: An 8, 16, 32 or 64-bit signed integer. The valid range of the value for a Resource SHOULD be defined. This data type is also used for the purpose of enumeration.
@@ -82,7 +82,7 @@ There are 7 data types, same as the ones defined in OMA LWM2M [1].
 
 
 ### 2.3. Operations
-IPSO Objects and their resources have the same operations as their counterparts in the OMA LWM2M specification [1] with the same semantics.
+IPSO Objects and their resources have the same operations as their counterparts in the [OMA LWM2M](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf) specification with the same semantics.
 
 1. Resource values: Read, Write, Execute (restricted by the Access Type field)
 2. Object Instances: Create, Delete (restricted by the Multiple Instances field)
@@ -91,7 +91,7 @@ IPSO Objects and their resources have the same operations as their counterparts 
 
 ### 2.4. Content formats
 
-Content formats are those specified by the OMA LWM2M TS 1.0 [1] and SenML [2] specifications:
+Content formats are those specified by the [OMA LW TS 1,0](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf), JSON, [CBOR](http://cbor.io) and [SenML](https://tools.ietf.org/html/draft-ietf-core-senml-05) specifications:
 
 1. Resource values: text/plain, application/vnd.oma.lwm2m+tlv, application/senml+json, application/senml+cbor
 2. Objects: application/senml+json, application/senml+cbor, application/vnd.oma.lwm2m+tlv
@@ -252,12 +252,16 @@ If you have specific apps or gadgets that need to be covered by IPSO Objects you
 ---
 
 <a name="references"></a>
-## 8. References
+## 8. References to specifications
 
-[1] "Lightweight Machine to Machine Technical Specification, Approved Version 1.0". Feb 2017. [OMA-TS-LightweightM2M-V1_0-20170208-A.pdf](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf)
-
-[2] "Media Types for Sensor Measurement Lists (SenML)". March 2017. [draft-ietf-core-senml-05](https://tools.ietf.org/html/draft-ietf-core-senml-05)
+- "The Constrained Application Protocol (CoAP)". April 2017. <https://tools.ietf.org/html/rfc7252>
+- "Lightweight Machine to Machine Technical Specification, Approved Version 1.0". Feb 2017. [OMA-TS-LightweightM2M-V1_0-20170208-A.pdf](http://www.openmobilealliance.org/release/LightweightM2M/V1_0-20170208-A/OMA-TS-LightweightM2M-V1_0-20170208-A.pdf)
+- "Media Types for Sensor Measurement Lists (SenML)". March 2017. <https://tools.ietf.org/html/draft-ietf-core-senml-05>
+- "Representing CoRE Formats in JSON and CBOR". April 2017. <https://tools.ietf.org/html/draft-ietf-core-links-json-07>
+- "Observing Resources in the Constrained Application Protocol (CoAP)". April 2017. <https://tools.ietf.org/html/rfc7641>
+- "Concise Binary Object Representation (CBOR)". April 2017. <http://cbor.io>
+- "Constrained RESTful Environments (CoRE) Link Format". April 2017. <https://tools.ietf.org/html/rfc6690>
 
 ---
 
-Authored by [@jaimejim](https://github.com/jaimejim) - 2017 IPSO Alliance
+Authored by [Contributors](https://github.com/IPSO-Alliance/pub/graphs/contributors) - 2017 IPSO Alliance
