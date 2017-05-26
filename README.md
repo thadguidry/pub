@@ -228,7 +228,7 @@ The current set of registered Objects and their corresponding Object IDs can be 
 <a name="implementations"></a>
 ## 6. Sample Implementations
 
-* [JSON file]( https://github.com/eclipse/leshan/blob/master/leshan-core/src/main/resources/oma-objects-spec.json) of the supported LWM2M and IPSO Objects in [Leshan](http://www.eclipse.org/leshan/).
+* [Example XML]( https://github.com/eclipse/leshan/tree/892f1eff368bfec617ffdca2aba536aede7bc1b9/leshan-server-demo/src/main/resources/models) of the supported LWM2M and IPSO Objects in [Leshan](http://www.eclipse.org/leshan/).
 
 * Sample [C package](https://github.com/contiki-os/contiki/tree/master/apps/ipso-objects) for use of IPSO Objects in [Contiki](http://www.contiki-os.org).
 
