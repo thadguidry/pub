@@ -9,8 +9,8 @@
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
-            <Item ID="5851">
-                <Name>Dimmer</Name>
+            <Item ID="5548">
+                <Name>Level</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
