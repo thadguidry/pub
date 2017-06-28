@@ -11,7 +11,7 @@ This object set is intended to be used as a starting place from which to build m
 
 | Object 				| Object ID   |
 |:----------------------|:-----------:|
-|    Digital 					| 3200|
+|    Digital Input				| 3200|
 |    Digital Output  			| 3201|
 |    Analogue Input  			| 3202|
 |    Analogue Output 			| 3203|
