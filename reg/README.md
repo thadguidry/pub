@@ -62,6 +62,9 @@ This object set is intended to be used as a starting place from which to build m
 |    Rate						| 3346|
 |    Push Button				| 3347|
 |    Multi-state Selector		| 3348|
+|    Bitmap                     | 3349|
+|    Stopwatch                  | 3350|
+
 
 
 Below there is the set of Resources that can be used as building blocks for your Objects.
@@ -163,6 +166,9 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Set Point Value              | 5900|         R,W|  Float|
 |    Busy to Clear delay          | 5903|         R,W|Integer|
 |    Clear to Busy delay          | 5904|         R,W|Integer|
+|    Bitmap Input                 | 5910|           R|Integer|
+|    Bitmap Input Reset           | 5911|           E| Opaque|
+|    Bit Description              | 5912|         R,W| String|
 
 NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
 * Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
