@@ -155,8 +155,6 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Criticality Level            | 5826|         R,W|Integer|
 |    Avg Load Adj Pct             | 5827|         R,W| String|
 |    Duty Cycle                   | 5828|         R,W|Integer|
-|    Increase Input State         | 5532|           R|Boolean|
-|    Decrease Input State         | 5533|           R|Boolean|
 |    On/Off                       | 5850|         R,W|Boolean|
 |    Dimmer                       | 5851|         R,W|Integer|
 |    On Time                      | 5852|         R,W|Integer|
