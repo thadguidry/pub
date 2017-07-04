@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Stopwatch</Name>
-		<Description1>Emulation of a stopwatch that counts how long time has passed since the watch was started after reset.</Description1>
+		<Description1>Stopwatch that counts how long time has passed since the watch was started after reset.</Description1>
 		<ObjectID>3350</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3350</ObjectURN>
 		<LWM2MVersion />
@@ -16,7 +16,7 @@
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description>The total time in seconds that the stopwatch is on. Writing a 0 resets the time.</Description>
+				<Description>The total time in seconds that the stopwatch has been on. Writing a 0 resets the time.</Description>
 			</Item>
 			<Item ID="5850"><Name>On/Off</Name>
 				<Operations>RW</Operations>
