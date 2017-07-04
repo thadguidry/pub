@@ -43,7 +43,6 @@ This object set is intended to be used as a starting place from which to build m
 |    Conductivity				| 3327|
 |    Power						| 3328|
 |    Power Factor				| 3329|
-|    Rate						| 3346|
 |    Distance					| 3330|
 |    Energy						| 3331|
 |    Direction					| 3332|
@@ -57,11 +56,12 @@ This object set is intended to be used as a starting place from which to build m
 |    Timer						| 3340|
 |    Addressable Text Display	| 3341|
 |    On/Off Switch				| 3342|
-|    Push Button				| 3347|
 |    Level Controllers			| 3343|
 |    Up/Down Control			| 3344|
-|    Multi-state Selector		| 3348|
 |    Multiple Axis Joystick		| 3345|
+|    Rate						| 3346|
+|    Push Button				| 3347|
+|    Multi-state Selector		| 3348|
 
 
 Below there is the set of Resources that can be used as building blocks for your Objects.
@@ -155,8 +155,6 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Criticality Level            | 5826|         R,W|Integer|
 |    Avg Load Adj Pct             | 5827|         R,W| String|
 |    Duty Cycle                   | 5828|         R,W|Integer|
-|    Increase Input State         | 5532|           R|Boolean|
-|    Decrease Input State         | 5533|           R|Boolean|
 |    On/Off                       | 5850|         R,W|Boolean|
 |    Dimmer                       | 5851|         R,W|Integer|
 |    On Time                      | 5852|         R,W|Integer|
