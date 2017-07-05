@@ -27,14 +27,14 @@
 				<Units></Units>
 				<Description>Reset the Bitmap Input value.</Description>
 			</Item>
-			<Item ID="5912"><Name>Bit Description</Name>
+			<Item ID="5912"><Name>Element Description</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc. </Description>
+				<Description>The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc.</Description>
 			</Item>
 			<Item ID="5750"><Name>Application Type</Name>
 				<Operations>RW</Operations>
