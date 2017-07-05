@@ -168,7 +168,7 @@ Below there is the set of Resources that can be used as building blocks for your
 |    Clear to Busy delay          | 5904|         R,W|Integer|
 |    Bitmap Input                 | 5910|           R|Integer|
 |    Bitmap Input Reset           | 5911|           E| Opaque|
-|    Bit Description              | 5912|         R,W| String|
+|    Element Description          | 5912|         R,W| String|
 
 NB: Please use the [issue tracker](https://github.com/IPSO-Alliance/pub/issues) if you find any mistakes on the content.
 * Join the room here: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IPSO-Alliance)
