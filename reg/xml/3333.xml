@@ -17,7 +17,7 @@
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units>s</Units>
-                <Description>Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone.</Description>
+                <Description>Unix Time (epoch time). A signed 32-bit integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone.  In systems, typically a Unix Time is used to encode a datetime as a 32-bit integer.</Description>
             </Item>
             <Item ID="5507">
                 <Name>Fractional Time</Name>
